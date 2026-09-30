@@ -1,0 +1,32 @@
+body {
+    background-color: blue;
+    font-family: Arial;
+    /* Centre tout le texte de la page */
+    text-align: center; 
+}
+
+h1 {
+    /* Change la couleur du titre en blanc */
+    color: white; 
+}
+
+/* Cible spécifiquement le premier bouton (celui qui a le texte "caca") */
+button:nth-of-type(1) {
+    background-color: saddlebrown;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* (Optionnel) Si tu veux aussi styler un peu l'autre bouton pour qu'il soit assorti */
+button:nth-of-type(2) {
+    background-color: white;
+    color: red;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Ma page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Bienvenue</h1>
+    <p>Première page web</p>
+    <img src="images.jpg" width="250" alt="Mon image">
+
+    <!-- Les deux textes à modifier -->
+    <p id="texte">jules</p>
+    <p id="autre-texte">jc</p>
+
+    <!-- Tes deux boutons de base -->
+    <button onclick="alert('le caca')">caca</button>
+    <button onclick="alert('simon le caca')">Clique ici</button>
+
+    <br><br>
+
+    <!-- Les 2 boutons de modification (en bleu) -->
+    <button onclick="changerPremierTexte()" style="background-color: blue; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">Modifier le 1er texte</button>
+    <button onclick="changerDeuxiemeTexte()" style="background-color: blue; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">Modifier le 2e texte</button>
+
+    <script>
+        // Première fonction pour le premier texte (ton nom Jules en rouge)
+        function changerPremierTexte() {
+            let element1 = document.getElementById("texte");
+            element1.innerHTML = "Jules";
+            element1.style.color = "red";
+        }
+
+        // Deuxième fonction pour le deuxième texte (ju suis jules en rouge)
+        function changerDeuxiemeTexte() {
+            let element2 = document.getElementById("autre-texte");
+            element2.innerHTML = "ju suis jules";
+            element2.style.color = "red";
+        }
+    </script>
+</body>
+</html>

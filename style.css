@@ -1,32 +1,200 @@
+:root {
+  --bg-dark: #0f172a;
+  --bg-light: #e0f2fe;
+  --primary: #2563eb;
+  --primary-dark: #1d4ed8;
+  --accent: #f97316;
+  --text: #1f2937;
+  --white: #ffffff;
+  --shadow: rgba(15, 23, 42, 0.15);
+}
+
+* {
+  box-sizing: border-box;
+}
+
 body {
-    background-color: blue;
-    font-family: Arial;
-    /* Centre tout le texte de la page */
-    text-align: center; 
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #dbeafe 0%, #eff6ff 50%, #f8fafc 100%);
+  color: var(--text);
 }
 
-h1 {
-    /* Change la couleur du titre en blanc */
-    color: white; 
+.hero {
+  background: linear-gradient(135deg, var(--bg-dark) 0%, #1e3a8a 100%);
+  color: var(--white);
+  padding: 24px 8% 60px;
 }
 
-/* Cible spécifiquement le premier bouton (celui qui a le texte "caca") */
-button:nth-of-type(1) {
-    background-color: saddlebrown;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto 40px;
 }
 
-/* (Optionnel) Si tu veux aussi styler un peu l'autre bouton pour qu'il soit assorti */
-button:nth-of-type(2) {
-    background-color: white;
-    color: red;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: var(--white);
+  text-decoration: none;
+  opacity: 0.9;
+}
+
+.nav-links a:hover {
+  opacity: 1;
+}
+
+.hero-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.hero-text {
+  flex: 1;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #bfdbfe;
+  font-size: 0.8rem;
+  margin-bottom: 12px;
+}
+
+.hero-text h1 {
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  margin: 0 0 16px;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #dbeafe;
+  max-width: 600px;
+}
+
+.cta-group {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+button {
+  border: none;
+  border-radius: 999px;
+  font-size: 1rem;
+  padding: 14px 22px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+}
+
+.primary-btn {
+  background: var(--accent);
+  color: var(--white);
+  box-shadow: 0 10px 20px rgba(249, 115, 22, 0.25);
+}
+
+.secondary-btn {
+  background: var(--white);
+  color: var(--primary-dark);
+  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.15);
+}
+
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-image img {
+  width: min(100%, 440px);
+  border-radius: 24px;
+  box-shadow: 0 18px 40px var(--shadow);
+}
+
+.content {
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 0 8%;
+}
+
+.panel {
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+  text-align: center;
+}
+
+.panel h2 {
+  margin-top: 0;
+  font-size: 2rem;
+}
+
+#texte-principal,
+#texte-secondaire {
+  font-size: 1.2rem;
+  margin: 12px 0;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  margin-top: 30px;
+}
+
+.card {
+  background: var(--white);
+  border-radius: 18px;
+  padding: 24px;
+  box-shadow: 0 12px 25px rgba(15, 23, 42, 0.08);
+}
+
+.card h3 {
+  margin-top: 0;
+  color: var(--primary-dark);
+}
+
+footer {
+  text-align: center;
+  padding: 30px 20px 40px;
+  color: var(--text);
+}
+
+@media (max-width: 768px) {
+  .nav,
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .nav-links {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .features {
+    grid-template-columns: 1fr;
+  }
 }

@@ -1,43 +1,86 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <title>Ma page</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <h1>Bienvenue</h1>
-    <p>Première page web</p>
-    <img src="images.jpg" width="250" alt="Mon image">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projet SNT - Jules</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <nav class="nav">
+        <div class="logo">Jules</div>
+        <div class="nav-links">
+          <a href="#accueil">Accueil</a>
+          <a href="#projet">Projet</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
 
-    <!-- Les deux textes à modifier -->
-    <p id="texte">jules</p>
-    <p id="autre-texte">jc</p>
+      <section class="hero-content" id="accueil">
+        <div class="hero-text">
+          <p class="eyebrow">Projet web SNT</p>
+          <h1>Bienvenue sur mon site</h1>
+          <p class="subtitle">
+            Ce projet montre une page d'accueil moderne avec une image, des
+            sections, et des boutons interactifs.
+          </p>
 
-    <!-- Tes deux boutons de base -->
-    <button onclick="alert('le caca')">caca</button>
-    <button onclick="alert('simon le caca')">Clique ici</button>
+          <div class="cta-group">
+            <button class="primary-btn" onclick="changerTextePrincipal()">
+              Modifier le titre
+            </button>
+            <button class="secondary-btn" onclick="changerTexteSecondaire()">
+              Modifier le texte
+            </button>
+          </div>
+        </div>
 
-    <br><br>
+        <div class="hero-image">
+          <img src="images.jpg" alt="Illustration du projet" />
+        </div>
+      </section>
+    </header>
 
-    <!-- Les 2 boutons de modification (en bleu) -->
-    <button onclick="changerPremierTexte()" style="background-color: blue; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">Modifier le 1er texte</button>
-    <button onclick="changerDeuxiemeTexte()" style="background-color: blue; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">Modifier le 2e texte</button>
+    <main class="content" id="projet">
+      <section class="panel">
+        <h2>Informations</h2>
+        <p id="texte-principal">Jules</p>
+        <p id="texte-secondaire">Développeur web en formation</p>
+      </section>
+
+      <section class="features">
+        <article class="card">
+          <h3>Design</h3>
+          <p>Interface claire, moderne et agréable à lire.</p>
+        </article>
+        <article class="card">
+          <h3>Code</h3>
+          <p>HTML structuré et CSS personnalisé pour le rendu.</p>
+        </article>
+        <article class="card">
+          <h3>Interaction</h3>
+          <p>Des boutons permettent de modifier les textes en temps réel.</p>
+        </article>
+      </section>
+    </main>
+
+    <footer id="contact">
+      <p>© 2026 - Projet créé par Jules</p>
+    </footer>
 
     <script>
-        // Première fonction pour le premier texte (ton nom Jules en rouge)
-        function changerPremierTexte() {
-            let element1 = document.getElementById("texte");
-            element1.innerHTML = "Jules";
-            element1.style.color = "red";
-        }
+      function changerTextePrincipal() {
+        const element = document.getElementById("texte-principal");
+        element.textContent = "Jules - Créateur du projet";
+        element.style.color = "#ff6b6b";
+      }
 
-        // Deuxième fonction pour le deuxième texte (ju suis jules en rouge)
-        function changerDeuxiemeTexte() {
-            let element2 = document.getElementById("autre-texte");
-            element2.innerHTML = "ju suis jules";
-            element2.style.color = "red";
-        }
+      function changerTexteSecondaire() {
+        const element = document.getElementById("texte-secondaire");
+        element.textContent = "Je suis ravi de partager ce projet web !";
+        element.style.color = "#2d6cdf";
+      }
     </script>
-</body>
+  </body>
 </html>
